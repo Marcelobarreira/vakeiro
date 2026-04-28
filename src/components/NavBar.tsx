@@ -3,7 +3,8 @@ const LINKS = [
   { id: 'live', label: 'LIVE STATUS' },
   { id: 'dossie', label: 'DOSSIÊ' },
   { id: 'conquistas', label: 'CONQUISTAS' },
-  { id: 'agenda', label: 'AGENDA' },
+  { id: 'clipes', label: 'CLIPES' },
+  { id: 'calendario', label: 'CALENDÁRIO' },
   { id: 'manifesto', label: 'MANIFESTO' },
   { id: 'patrocinadores', label: 'SPONSORS' },
   { id: 'rodape', label: '∎' },
@@ -16,7 +17,7 @@ export function NavBar() {
         <a href="#hero" className="font-display font-black text-sm tracking-widest">
           ◢ VAKEIRO LIVES ◣
         </a>
-        <ul className="hidden md:flex gap-5 font-mono text-[10px] uppercase tracking-widest">
+        <ul className="hidden md:flex gap-4 font-mono text-[10px] uppercase tracking-widest">
           {LINKS.map((l) => (
             <li key={l.id}>
               <a

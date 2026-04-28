@@ -4,7 +4,7 @@ export function ManifestoSection() {
   return (
     <div className="text-center max-w-2xl mx-auto py-20">
       <p className="font-mono text-[10px] tracking-[0.3em] text-[color:var(--color-magenta-neon)]">
-        ▌SEÇÃO 06 · COMUNICADO À NAÇÃO
+        ▌SEÇÃO 07 · COMUNICADO À NAÇÃO
       </p>
       <h2 className="font-display text-3xl md:text-4xl font-black mt-4 tracking-wide">
         {MANIFESTO.heading}
