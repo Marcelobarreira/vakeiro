@@ -2,6 +2,7 @@ import { NavBar } from '@/components/NavBar';
 import { ScanlineOverlay } from '@/components/ScanlineOverlay';
 import { SectionAnchor } from '@/components/SectionAnchor';
 import { HeroSection } from '@/sections/HeroSection';
+import { LiveStatusSection } from '@/sections/LiveStatusSection';
 
 export default function App() {
   return (
@@ -11,7 +12,7 @@ export default function App() {
       <SectionAnchor id="hero" className="pt-32">
         <HeroSection />
       </SectionAnchor>
-      <SectionAnchor id="live"><h2 className="font-display text-4xl">LIVE STATUS</h2></SectionAnchor>
+      <SectionAnchor id="live"><LiveStatusSection /></SectionAnchor>
       <SectionAnchor id="dossie"><h2 className="font-display text-4xl">DOSSIÊ</h2></SectionAnchor>
       <SectionAnchor id="conquistas"><h2 className="font-display text-4xl">CONQUISTAS</h2></SectionAnchor>
       <SectionAnchor id="agenda"><h2 className="font-display text-4xl">AGENDA</h2></SectionAnchor>
