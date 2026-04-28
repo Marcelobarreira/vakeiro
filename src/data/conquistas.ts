@@ -30,8 +30,8 @@ export const CONQUISTAS: Conquista[] = [
   },
 ];
 
-export const LIVES_THIS_WEEK = 4;
-export const META_LIVES_PER_WEEK = 7;
+export const LIVES_THIS_WEEK = 0;
+export const META_LIVES_PER_WEEK = 3;
 
 // Fallback ISO date for "tempo desde a última live" when Decapi doesn't expose it.
 // Update on commits to keep the joke fresh.
