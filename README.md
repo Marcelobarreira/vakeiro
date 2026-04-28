@@ -1,4 +1,4 @@
-# Vakeiro
+# Vakeiro Lives
 
 Site de fã (paródia) do streamer Euler Vakeiro — [twitch.tv/vakeiroo](https://www.twitch.tv/vakeiroo).
 

@@ -14,7 +14,7 @@ export function NavBar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[color:var(--color-bg)]/80 backdrop-blur border-b border-white/10">
       <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
         <a href="#hero" className="font-display font-black text-sm tracking-widest">
-          ◢ VAKEIRO ◣
+          ◢ VAKEIRO LIVES ◣
         </a>
         <ul className="hidden md:flex gap-5 font-mono text-[10px] uppercase tracking-widest">
           {LINKS.map((l) => (
