@@ -1,7 +1,7 @@
 import { NavBar } from '@/components/NavBar';
 import { ScanlineOverlay } from '@/components/ScanlineOverlay';
 import { SectionAnchor } from '@/components/SectionAnchor';
-import { GlitchTitle } from '@/components/GlitchTitle';
+import { HeroSection } from '@/sections/HeroSection';
 
 export default function App() {
   return (
@@ -9,10 +9,7 @@ export default function App() {
       <ScanlineOverlay />
       <NavBar />
       <SectionAnchor id="hero" className="pt-32">
-        <GlitchTitle text="VAKEIRO" className="text-7xl md:text-9xl" />
-        <p className="font-mono text-sm text-[color:var(--color-cyan-neon)] mt-3">
-          ▌ID_0xVAK · STREAMER · TWITCH BR
-        </p>
+        <HeroSection />
       </SectionAnchor>
       <SectionAnchor id="live"><h2 className="font-display text-4xl">LIVE STATUS</h2></SectionAnchor>
       <SectionAnchor id="dossie"><h2 className="font-display text-4xl">DOSSIÊ</h2></SectionAnchor>
