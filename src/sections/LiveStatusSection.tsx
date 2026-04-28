@@ -71,9 +71,9 @@ export function LiveStatusSection() {
           label="Status do imperador"
           value={
             online ? (
-              <span className="text-[color:var(--color-cyan-neon)]">AO VIVO</span>
+              <span className="text-2xl text-[color:var(--color-cyan-neon)]">AO VIVO</span>
             ) : (
-              <span className="text-[color:var(--color-magenta-neon)]">DORMINDO</span>
+              <span className="text-2xl text-[color:var(--color-magenta-neon)]">DORMINDO</span>
             )
           }
           variant="cyan"
