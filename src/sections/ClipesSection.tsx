@@ -13,7 +13,7 @@ export function ClipesSection() {
         Fragmentos preservados da transmissão. Acesso liberado para fins de estudo.
       </p>
 
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
         {CLIPES.map((c) => (
           <HUDFrame key={c.slug} variant="mixed" className="flex flex-col gap-4">
             <div className="font-mono text-[10px] tracking-[0.3em] text-[color:var(--color-magenta-neon)]">

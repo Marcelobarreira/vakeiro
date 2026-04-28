@@ -56,7 +56,7 @@ export function CalendarioSection() {
   return (
     <div>
       <p className="font-mono text-[10px] tracking-[0.3em] text-[color:var(--color-cyan-neon)]">
-        ▌SEÇÃO 06 · REGISTRO HISTÓRICO DE TRANSMISSÕES
+        ▌SEÇÃO 07 · REGISTRO HISTÓRICO DE TRANSMISSÕES
       </p>
       <h2 className="font-display text-4xl md:text-5xl font-black mt-2">
         CALENDÁRIO

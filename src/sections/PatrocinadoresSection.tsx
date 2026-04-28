@@ -5,7 +5,7 @@ export function PatrocinadoresSection() {
   return (
     <div>
       <p className="font-mono text-[10px] tracking-[0.3em] text-[color:var(--color-cyan-neon)]">
-        ▌SEÇÃO 08 · PARCEIROS COMERCIAIS
+        ▌SEÇÃO 09 · PARCEIROS COMERCIAIS
       </p>
       <h2 className="font-display text-4xl md:text-5xl font-black mt-2">PATROCINADORES</h2>
       <p className="font-mono text-xs text-[color:var(--color-text-dim)] mt-3">

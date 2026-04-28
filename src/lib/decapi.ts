@@ -3,11 +3,11 @@ const USER = 'vakeiroo';
 
 export class DecapiError extends Error {}
 
-async function fetchText(endpoint: string): Promise<string> {
-  const res = await fetch(`${BASE}/${endpoint}/${USER}`, {
+async function fetchText(endpoint: string, login: string = USER): Promise<string> {
+  const res = await fetch(`${BASE}/${endpoint}/${login}`, {
     headers: { Accept: 'text/plain' },
   });
-  if (!res.ok) throw new DecapiError(`HTTP ${res.status} on ${endpoint}`);
+  if (!res.ok) throw new DecapiError(`HTTP ${res.status} on ${endpoint}/${login}`);
   return (await res.text()).trim();
 }
 
@@ -52,5 +52,26 @@ export async function getLastStreamDate(): Promise<string | null> {
     return text;
   } catch {
     return null;
+  }
+}
+
+// Generic helpers for arbitrary Twitch logins (used by Members section).
+export async function getAvatarFor(login: string): Promise<string | null> {
+  try {
+    const text = await fetchText('avatar', login);
+    if (!text.startsWith('http')) return null;
+    return text;
+  } catch {
+    return null;
+  }
+}
+
+export async function getUptimeFor(login: string): Promise<UptimeResult> {
+  try {
+    const text = await fetchText('uptime', login);
+    const offline = /offline|not.*live|nunca/i.test(text);
+    return { online: !offline, uptime: offline ? null : text };
+  } catch {
+    return { online: false, uptime: null };
   }
 }

@@ -6,6 +6,7 @@ import { LiveStatusSection } from '@/sections/LiveStatusSection';
 import { DossieSection } from '@/sections/DossieSection';
 import { ConquistasSection } from '@/sections/ConquistasSection';
 import { ClipesSection } from '@/sections/ClipesSection';
+import { MembrosSection } from '@/sections/MembrosSection';
 import { CalendarioSection } from '@/sections/CalendarioSection';
 import { ManifestoSection } from '@/sections/ManifestoSection';
 import { PatrocinadoresSection } from '@/sections/PatrocinadoresSection';
@@ -21,6 +22,7 @@ export default function App() {
       <SectionAnchor id="dossie"><DossieSection /></SectionAnchor>
       <SectionAnchor id="conquistas"><ConquistasSection /></SectionAnchor>
       <SectionAnchor id="clipes"><ClipesSection /></SectionAnchor>
+      <SectionAnchor id="membros"><MembrosSection /></SectionAnchor>
       <SectionAnchor id="calendario"><CalendarioSection /></SectionAnchor>
       <SectionAnchor id="manifesto"><ManifestoSection /></SectionAnchor>
       <SectionAnchor id="patrocinadores"><PatrocinadoresSection /></SectionAnchor>
