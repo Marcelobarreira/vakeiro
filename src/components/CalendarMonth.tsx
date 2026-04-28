@@ -1,4 +1,5 @@
 import type { LiveDay } from '@/data/calendario';
+import { formatHoursMinutes } from '@/lib/format';
 
 interface Props {
   year: number;
@@ -60,7 +61,7 @@ export function CalendarMonth({ year, month, liveDays, today }: Props) {
                   ? 'border-[color:var(--color-magenta-neon)] ring-1 ring-[color:var(--color-magenta-neon)]/60'
                   : 'border-white/10'
               } ${live ? 'bg-[color:var(--color-cyan-neon)]/10' : ''} hover:border-[color:var(--color-cyan-neon)] focus-visible:border-[color:var(--color-cyan-neon)]`}
-              aria-label={live ? `${day} — ${live.title} (${live.durationMin} min)` : `${day} — sem transmissão`}
+              aria-label={live ? `${day} — ${live.title} (${formatHoursMinutes(live.durationMin)})` : `${day} — sem transmissão`}
             >
               <span
                 className={`text-xs ${live ? 'text-white' : 'text-[color:var(--color-text-dim)]'}`}
@@ -77,7 +78,7 @@ export function CalendarMonth({ year, month, liveDays, today }: Props) {
                 <span className="pointer-events-none absolute z-30 top-full left-1/2 -translate-x-1/2 mt-1 hidden group-hover:flex group-focus-visible:flex flex-col items-start gap-1 bg-black/95 border border-[color:var(--color-cyan-neon)] px-3 py-2 text-[10px] text-white whitespace-nowrap">
                   <span>{live.title}</span>
                   <span className="text-[color:var(--color-cyan-neon)]">
-                    {live.durationMin} min · {live.game ?? '—'}
+                    {formatHoursMinutes(live.durationMin)} · {live.game ?? '—'}
                   </span>
                 </span>
               )}
