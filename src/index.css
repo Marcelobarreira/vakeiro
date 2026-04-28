@@ -33,3 +33,7 @@ body {
   background: var(--color-magenta-neon);
   color: #000;
 }
+
+html {
+  scroll-behavior: smooth;
+}

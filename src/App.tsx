@@ -1,23 +1,26 @@
+import { NavBar } from '@/components/NavBar';
 import { ScanlineOverlay } from '@/components/ScanlineOverlay';
+import { SectionAnchor } from '@/components/SectionAnchor';
 import { GlitchTitle } from '@/components/GlitchTitle';
-import { StatCard } from '@/components/StatCard';
-import { StatusBadge } from '@/components/StatusBadge';
-import { LiveCounter } from '@/components/LiveCounter';
 
 export default function App() {
   return (
     <>
       <ScanlineOverlay />
-      <main className="min-h-screen px-8 py-12 max-w-5xl mx-auto">
-        <GlitchTitle text="VAKEIRO" className="text-7xl" />
-        <div className="mt-3"><StatusBadge online={false} /></div>
-        <div className="mt-12 grid grid-cols-2 gap-6">
-          <StatCard label="Tempo desde a última live" value={<LiveCounter fromIso={null} />} variant="cyan" />
-          <StatCard label="Média de viewers" value="07" variant="mixed" />
-          <StatCard label="Lives esta semana" value="2" unit="/ meta 7" variant="magenta" />
-          <StatCard label="Status" value="OFFLINE" variant="cyan" />
-        </div>
-      </main>
+      <NavBar />
+      <SectionAnchor id="hero" className="pt-32">
+        <GlitchTitle text="VAKEIRO" className="text-7xl md:text-9xl" />
+        <p className="font-mono text-sm text-[color:var(--color-cyan-neon)] mt-3">
+          ▌ID_0xVAK · STREAMER · TWITCH BR
+        </p>
+      </SectionAnchor>
+      <SectionAnchor id="live"><h2 className="font-display text-4xl">LIVE STATUS</h2></SectionAnchor>
+      <SectionAnchor id="dossie"><h2 className="font-display text-4xl">DOSSIÊ</h2></SectionAnchor>
+      <SectionAnchor id="conquistas"><h2 className="font-display text-4xl">CONQUISTAS</h2></SectionAnchor>
+      <SectionAnchor id="agenda"><h2 className="font-display text-4xl">AGENDA</h2></SectionAnchor>
+      <SectionAnchor id="manifesto"><h2 className="font-display text-4xl">MANIFESTO</h2></SectionAnchor>
+      <SectionAnchor id="patrocinadores"><h2 className="font-display text-4xl">PATROCINADORES</h2></SectionAnchor>
+      <SectionAnchor id="rodape"><h2 className="font-display text-4xl">∎</h2></SectionAnchor>
     </>
   );
 }
