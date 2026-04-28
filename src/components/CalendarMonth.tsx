@@ -18,6 +18,12 @@ function isoDate(year: number, month: number, day: number): string {
   return `${year}-${pad(month)}-${pad(day)}`;
 }
 
+function ariaLabelFor(day: number, live: LiveDay | undefined): string {
+  if (!live) return `${day} — sem transmissão`;
+  const time = live.startTime ? `, início ${live.startTime}` : '';
+  return `${day} — ${live.title}${time} (${formatHoursMinutes(live.durationMin)})`;
+}
+
 export function CalendarMonth({ year, month, liveDays, today }: Props) {
   // First day of the month: 0=Sun..6=Sat → adjust to Mon=0..Sun=6
   const firstDayJs = new Date(year, month - 1, 1).getDay();
@@ -56,29 +62,38 @@ export function CalendarMonth({ year, month, liveDays, today }: Props) {
             <button
               key={iso}
               type="button"
-              className={`group relative aspect-square border flex flex-col items-center justify-center transition-colors focus-visible:outline-none ${
+              className={`group relative aspect-square border flex flex-col items-center justify-center gap-0.5 transition-colors focus-visible:outline-none ${
                 isToday
                   ? 'border-[color:var(--color-magenta-neon)] ring-1 ring-[color:var(--color-magenta-neon)]/60'
                   : 'border-white/10'
               } ${live ? 'bg-[color:var(--color-cyan-neon)]/10' : ''} hover:border-[color:var(--color-cyan-neon)] focus-visible:border-[color:var(--color-cyan-neon)]`}
-              aria-label={live ? `${day} — ${live.title} (${formatHoursMinutes(live.durationMin)})` : `${day} — sem transmissão`}
+              aria-label={ariaLabelFor(day, live)}
             >
               <span
-                className={`text-xs ${live ? 'text-white' : 'text-[color:var(--color-text-dim)]'}`}
+                className={`text-xs leading-none ${
+                  live ? 'text-white' : 'text-[color:var(--color-text-dim)]'
+                }`}
               >
                 {pad(day)}
               </span>
+              {live?.startTime && (
+                <span className="text-[9px] leading-none text-[color:var(--color-cyan-neon)]">
+                  {live.startTime}
+                </span>
+              )}
               {live && (
                 <span
                   aria-hidden
-                  className="mt-1 w-1.5 h-1.5 rounded-full bg-[color:var(--color-cyan-neon)] shadow-[0_0_8px_var(--color-cyan-neon)]"
+                  className="w-1.5 h-1.5 rounded-full bg-[color:var(--color-cyan-neon)] shadow-[0_0_8px_var(--color-cyan-neon)]"
                 />
               )}
               {live && (
                 <span className="pointer-events-none absolute z-30 top-full left-1/2 -translate-x-1/2 mt-1 hidden group-hover:flex group-focus-visible:flex flex-col items-start gap-1 bg-black/95 border border-[color:var(--color-cyan-neon)] px-3 py-2 text-[10px] text-white whitespace-nowrap">
                   <span>{live.title}</span>
                   <span className="text-[color:var(--color-cyan-neon)]">
-                    {formatHoursMinutes(live.durationMin)} · {live.game ?? '—'}
+                    {live.startTime ? `${live.startTime} · ` : ''}
+                    {formatHoursMinutes(live.durationMin)}
+                    {live.game ? ` · ${live.game}` : ''}
                   </span>
                 </span>
               )}
