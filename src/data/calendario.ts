@@ -5,17 +5,111 @@ export interface LiveDay {
   game?: string;
 }
 
+// Atividade real puxada do streamscharts.com/channels/vakeiroo
+// Multi-stream em mesmo dia consolidadas em uma entrada (duração somada,
+// jogo principal). Atualizar manualmente conforme novas transmissões.
 export const LIVE_DAYS: LiveDay[] = [
-  { date: '2024-09-15', durationMin: 23, title: 'primeira aparição da era moderna', game: 'Just Chatting' },
-  { date: '2024-09-22', durationMin: 41, title: 'tentativa interrompida por descanso', game: 'Just Chatting' },
-  { date: '2024-10-08', durationMin: 34, title: 'sessão noturna sob protesto', game: 'Counter-Strike 2' },
-  { date: '2024-11-30', durationMin: 19, title: 'live anunciada às 23h57', game: 'Just Chatting' },
-  { date: '2025-02-12', durationMin: 28, title: 'retorno triunfal após hiato de 42 dias', game: 'Counter-Strike 2' },
-  { date: '2025-04-21', durationMin: 56, title: 'maratona de raciocínio elevado', game: 'GTA V' },
-  { date: '2025-08-05', durationMin: 17, title: 'transmissão técnica curta', game: 'Just Chatting' },
-  { date: '2026-01-13', durationMin: 33, title: 'ano-novo do imperador', game: 'Just Chatting' },
-  { date: '2026-03-04', durationMin: 45, title: 'sessão de análise estratégica', game: 'Counter-Strike 2' },
-  { date: '2026-04-25', durationMin: 38, title: 'última transmissão registrada', game: 'Just Chatting' },
+  // Pico histórico de todos os tempos
+  {
+    date: '2024-10-31',
+    durationMin: 240,
+    title: 'Live de Halloween — pico histórico de 592 viewers simultâneos',
+    game: 'Just Chatting',
+  },
+
+  // Março 2026
+  {
+    date: '2026-03-27',
+    durationMin: 340,
+    title: 'A sexta-cheira bandida chegou — rumo a 20k',
+    game: 'EA Sports FC 26',
+  },
+  {
+    date: '2026-03-31',
+    durationMin: 125,
+    title: 'Aprendendo a jogar LOL',
+    game: 'League of Legends',
+  },
+
+  // Abril 2026
+  {
+    date: '2026-04-01',
+    durationMin: 605,
+    title: 'Gameplay duvidosa + LOL',
+    game: 'EA Sports FC 26',
+  },
+  {
+    date: '2026-04-07',
+    durationMin: 400,
+    title: 'Quem é vivo sempre aparece',
+    game: 'EA Sports FC 26',
+  },
+  {
+    date: '2026-04-08',
+    durationMin: 375,
+    title: 'Café da tarde com o Vakas',
+    game: 'EA Sports FC 26',
+  },
+  {
+    date: '2026-04-09',
+    durationMin: 245,
+    title: 'Tô mental',
+    game: 'Stationeers',
+  },
+  {
+    date: '2026-04-10',
+    durationMin: 570,
+    title: 'Sextou né',
+    game: 'EA Sports FC 26',
+  },
+  {
+    date: '2026-04-14',
+    durationMin: 375,
+    title: 'Terrorzin e depois react',
+    game: 'EA Sports FC 26',
+  },
+  {
+    date: '2026-04-15',
+    durationMin: 140,
+    title: 'Live meio zap hoje',
+    game: 'ROBLOX',
+  },
+  {
+    date: '2026-04-16',
+    durationMin: 670,
+    title: 'Gameplays de qualidade',
+    game: 'EA Sports FC 26',
+  },
+  {
+    date: '2026-04-21',
+    durationMin: 130,
+    title: 'Dia de peneira no Herome FC',
+    game: 'EA Sports FC 26',
+  },
+  {
+    date: '2026-04-22',
+    durationMin: 360,
+    title: 'Terrorzin e muita sacanagem',
+    game: 'EA Sports FC 26',
+  },
+  {
+    date: '2026-04-23',
+    durationMin: 345,
+    title: 'Só gameplay insana',
+    game: 'EA Sports FC 26',
+  },
+  {
+    date: '2026-04-24',
+    durationMin: 265,
+    title: 'Sexta do caos',
+    game: 'Just Chatting',
+  },
+  {
+    date: '2026-04-25',
+    durationMin: 280,
+    title: 'Live no sábado?',
+    game: 'Just Chatting',
+  },
 ];
 
 export const CALENDAR_MIN_YEAR = 2024;
