@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { GlitchTitle } from '@/components/GlitchTitle';
 import { StatusBadge } from '@/components/StatusBadge';
 import { useAvatar } from '@/hooks/useAvatar';
@@ -19,6 +20,13 @@ export function HeroSection() {
         <p className="font-mono text-sm text-[color:var(--color-text-dim)] mt-4">
           ID_0xVAK · STREAMER · TWITCH BR
         </p>
+        <motion.p
+          className="font-mono text-sm md:text-base text-[color:var(--color-magenta-neon)] mt-3 tracking-widest"
+          animate={{ opacity: [1, 0.45, 1] }}
+          transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          ▌ QUAL SERÁ A DESCULPA DE HOJE?
+        </motion.p>
         <div className="mt-6 flex items-center gap-6">
           <StatusBadge online={online} />
           <a

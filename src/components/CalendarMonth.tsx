@@ -76,9 +76,9 @@ export function CalendarMonth({ year, month, liveDays, today }: Props) {
               >
                 {pad(day)}
               </span>
-              {live?.startTime && (
-                <span className="text-[9px] leading-none text-[color:var(--color-cyan-neon)]">
-                  {live.startTime}
+              {live && (
+                <span className="text-[9px] leading-none text-[color:var(--color-cyan-neon)] font-mono">
+                  {formatHoursMinutes(live.durationMin)}
                 </span>
               )}
               {live && (

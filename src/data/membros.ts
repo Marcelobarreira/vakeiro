@@ -6,7 +6,7 @@ export interface Membro {
 
 export const MEMBROS: Membro[] = [
   {
-    login: 'gabefrasson',
+    login: 'gabefrasson_',
     name: 'GabeFrasson',
     description:
       'Membro do Conselho Restrito. Detém o segredo do timing perfeito para entrar nas transmissões.',
